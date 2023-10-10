@@ -1,12 +1,12 @@
-def isleapYear(year):
-  if( year % 4 == 0 and year % 100 != 0) or year % 400 ==0 :  
-    return True
-  else:
-    return False
+def linear_search_product(product_list, target_product):
+    indices = []
+    for index, product in enumerate(product_list):
+        if product == target_product:
+            indices.append(index)
+    return indices
 
-year = 2012
 
-if isleapYear(year):
-  print('{} is a leap year'.format({year}))
-else:
-  print('{} is not a leap year'.format({year}))
+products = ["Apple", "Banana", "Orange", "Apple", "Mango"]
+target = "Apple"
+result = linear_search_product(products, target)
+print(result)
